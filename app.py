@@ -1,4 +1,3 @@
-from re import A
 from flask import (
         Flask , 
         request , 
@@ -14,6 +13,10 @@ app = Flask(__name__)
 
 
 
+
+
+
+
 @app.route("/", methods = ["GET" , "POST"])
 def main () :
     """
@@ -21,13 +24,25 @@ def main () :
     """
     pass
 
+ 
 
 
 
 
-@app.route("/{gamePath}")
+
+
+
+
+
+@app.route("/<string:gamePath>")
 def gameMng (gamePath) : 
-    pass
+    return gamePath
+
+
+
+
+
+
 
 
 
@@ -64,12 +79,17 @@ def joinToGame () :
 
 
 
+
+
+
+
+
 @app.route("/about")
 def about () :
     """
     about page
     """
-    pass
+    return render_template("about.html")
 
 
 
