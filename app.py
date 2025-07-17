@@ -105,8 +105,6 @@ def joinToGame () :
     """
     if request.method == "POST" : 
         gameId = request.form.get("gameId")
-        DB = dbManager.DbManager()
-        act = DB.getAct(gameId)
 
         return redirect(f"/game/{gameId}")
     else : 
