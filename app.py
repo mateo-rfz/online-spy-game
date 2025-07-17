@@ -1,9 +1,14 @@
 from flask import (
-        Flask , 
+        Flask,
+        redirect , 
         request , 
         render_template
         )
 
+
+
+
+from modules import dbManager
 
 
 
@@ -22,7 +27,7 @@ def main () :
     """
     main page for web site 
     """
-    pass
+    return render_template("home.html")
 
  
 
@@ -34,9 +39,14 @@ def main () :
 
 
 
-@app.route("/<string:gamePath>")
-def gameMng (gamePath) : 
-    return gamePath
+@app.route("/game/<string:gameId>")
+def gameMng (gameId) : 
+    """
+    you can join to game with /<gamePath>
+    """
+    DB = dbManager.DbManager()
+    act = DB.getAct(gameId)
+    return render_template("releaseAct.html" , gameId = gameId , role = act)
 
 
 
@@ -50,14 +60,19 @@ def gameMng (gamePath) :
 
 
 
-@app.route("/create_game", methods = ["GET" , "POST"])
+@app.route("/create_game", methods = ["GET", "POST"])
 def createGame () :
     """
     route for create game 
     """
-    if request.methods == "POST" :
-        gameName = request.form.get("gameName")
-        playerNumbers = request.form.get("playerNumbes")
+    if request.method == "POST" :
+        playerNumbers = request.form.get("playerNumbers")
+        spyNumbers = request.form.get("spyNumbers")
+        
+        DB = dbManager.DbManager()
+        gameId = DB.addGame(int(playerNumbers) , int(spyNumbers))
+        
+        return render_template("gameInfo.html", gameId=gameId)
         
     else : 
         return render_template("createGame.html")
@@ -75,7 +90,14 @@ def joinToGame () :
     """ 
     join to games it create by /create_game
     """
-    pass
+    if request.method == "POST" : 
+        gameId = request.form.get("gameId")
+        DB = dbManager.DbManager()
+        act = DB.getAct(gameId)
+
+        return redirect(f"/game/{gameId}")
+    else : 
+        return render_template("joinToGame.html")
 
 
 
