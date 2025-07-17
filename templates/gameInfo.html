@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Game Info - Spy Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: monospace;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0c0c0c;
+      color: #cccccc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      color: #eeeeee;
+      margin-bottom: 0.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #777777;
+      margin-top: 0.5rem;
+    }
+
+    .game-info {
+      background-color: #222222;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .game-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .game-info p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #888888;
+    }
+
+    .btn {
+      background: none;
+      border: 1px solid #444;
+      padding: 1rem;
+      text-align: center;
+      color: #dddddd;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #222;
+    }
+
+    .footer {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Game Info</h1>
+    <p>Here is the information for your game.</p>
+  </div>
+
+  <div class="game-info">
+      <h2>Game ID: <span id="gameId">{{gameId}}</span></h2>
+    <p>Your Game ID and the action you need to perform will be shown here.</p>
+    <a href="/game/{{gameId}}" class="btn">Get Act</a>
+  </div>
+
+  <div class="footer">
+    made with <span style="color: red;">❤</span> by <a href="https://your-blog-link.example.com" target="_blank">mateo</a>
+  </div>
+
+</body>
+</html>
+

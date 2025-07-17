@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Game - spy game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: monospace;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0c0c0c;
+      color: #cccccc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      color: #eeeeee;
+      margin-bottom: 0.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #777777;
+      margin-top: 0.5rem;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 4rem;
+    }
+
+    select {
+      background: none;
+      border: 1px solid #444;
+      padding: 1rem;
+      color: #dddddd;
+      font-size: 1.1rem;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #888;
+    }
+
+    .btn {
+      background: none;
+      border: 1px solid #444;
+      padding: 1rem;
+      text-align: center;
+      color: #dddddd;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #222;
+    }
+
+    .footer {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 600px) {
+      .form-container {
+        width: 80%;
+      }
+
+      .btn {
+        flex: 1;
+        max-width: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Create Game</h1>
+    <p>Choose your settings and create a game. Trust no one.</p>
+  </div>
+
+  <div class="form-container">
+    <form method="POST" action="/create_game">
+      <label for="playerNumbers" style="color: #888; margin-bottom: 0.5rem;">Number of Players (1-15)</label>
+      <select name="playerNumbers" id="playerNumbers" required>
+        <option value="">Select Number of Players</option>
+        <!-- Generating numbers from 1 to 15 -->
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+      </select>
+
+      <label for="spyNumbers" style="color: #888; margin-bottom: 0.5rem;">Number of Spies (1-7)</label>
+      <select name="spyNumbers" id="spyNumbers" required>
+        <option value="">Select Number of Spies</option>
+        <!-- Generating numbers from 1 to 7 -->
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+
+      <button type="submit" class="btn">Create Game</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    made with <span style="color: red;">❤</span> by <a href="https://mateorfz.ir" target="_blank">mateo</a>
+  </div>
+
+</body>
+</html>
+
