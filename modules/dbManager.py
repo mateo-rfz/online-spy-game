@@ -15,9 +15,38 @@ class DbManager:
 
 
     def __randomWord(self):
-        return "randomWordForTest"
+        words = [
+    "Bank", "School", "Airport", "Hospital", "Beach", "Restaurant", "Circus", "Train", "Operating Room",
+    "Bus", "Prison", "Library", "Museum", "Sauna", "Gym", "Cafe", "Park", "Hotel", "Zoo",
+    "Shop", "Cinema", "Theater", "Ship", "Spaceship", "Military Base", "Camp", "Cave", "House",
+    "Garage", "University", "Laboratory", "Office", "Church", "Mosque", "Mountain", "Desert", "River",
+    "Aquarium", "Bedroom", "Kitchen", "Factory", "Bridge", "Football Field", "Basketball Court",
+    "Playground", "Supermarket", "Gas Station", "Fire Station", "Police Station", "Subway Station", "Train Station",
+    "Elevator", "Tent", "Balcony", "Storage", "Well", "Battlefield", "Bunker", "Server Room", "Meeting Room",
+    "Cemetery", "Cottage", "Wedding Hall", "Conference Room", "Runway", "Inside a Car", "Boat", "Freezer",
+    "Greenhouse", "Clubhouse", "Forest Camp", "Oil Tanker", "Wood Workshop", "Painting Studio", "Carpentry", "Tailor Shop", "Backyard",
+    "Music Room", "Swimming Pool", "Fitness Center", "Bakery", "Pastry Shop", "Bookstore", "Pharmacy",
+    "Farm", "Flower Shop", "Bazaar", "Teahouse", "Law Office", "Notary Office", "Repair Shop", "Exhibition",
+    "Studio", "Classroom", "Rooftop", "Clothing Store", "Car Wash", "Blacksmith", "Vegetable Market",
+    "Post Office", "Insurance Office", "Telecom Center", "Shopping Mall", "Traditional Market", "TV Antenna", "Beauty Salon",
+    "Barber Shop", "Arcade", "Secret Room", "Basement", "Abandoned Church", "Ice Cave", "Mountain Peak", "Nomad Tent",
+    "Town Square", "Welding Workshop", "Space Station", "Bird Nest", "Slide Park", "Abandoned Island", "Port", "Fish Market",
+    "Radio Station", "Hunting Cabin", "Military Camp", "Minefield", "Detective Office", "Inside a Suitcase", "Creepy Circus", "Metro Tunnel",
+    "Morgue", "Fitting Room", "Toy Store", "Game Arcade", "Dark Cave", "Changing Room", "Bookshelf", "Under the Bridge", "Control Room", "Weather Station",
+    "Airplane Cabin", "Departure Hall", "Meat Freezer", "Ammo Storage", "Haunted House", "Opera Hall", "Waiting Room",
+    "Board Game Cafe", "Chemistry Lab", "Language Class", "Dorm Room", "Laundry Room", "Backyard Garden", "Barracks",
+    "Taxi Station", "Backstage", "Security Room", "Pantry", "Workshop", "Attic", "Oil Well",
+    "Emergency Stairs", "Reading Room", "Wooden House", "Tool Shop", "Art Gallery", "Rug Shop",
+    "Auditorium", "Office Kitchen", "Film Archive", "Manager's Office", "Supervisor Room", "Book Storage", "Film Archive",
+    "Solitary Cell", "School Hallway", "Fire Truck Ladder", "Biology Lab", "Locker Room", "Underground Shelter",
+    "Animal Cage", "Late-Night Study Room", "Cow Farm", "Water Well", "Dissection Room", "Grass Field", "Bowling Alley",
+    "Skating Rink", "Inside a Train", "Inside a Bus", "Driver's Cabin", "Porch", "Coast Guard Station",
+    "Control Tower", "Power Station", "Telecom Tower", "Slide Hall", "Motorcycle Garage", "ER Station",
+    "Billiard Hall", "Grandma’s House", "Down the Well", "Fencing Hall", "Baseball Field", "Mountain Cabin"
+]
 
-
+        random.shuffle(words)
+        return random.choice(words)
 
 
 
