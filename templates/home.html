@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>spy game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: monospace;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0c0c0c;
+      color: #cccccc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    /* Navigation Links */
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+
+    .nav a {
+      color: #cccccc;
+      text-decoration: none;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+    }
+
+    .nav a:hover {
+      background-color: #333;
+      border-radius: 5px;
+      padding: 0.5rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      color: #eeeeee;
+      margin-bottom: 0.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #777777;
+      margin-top: 0.5rem;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 5rem;
+    }
+
+    .btn {
+      background: none;
+      border: 1px solid #444;
+      padding: 1rem;
+      text-align: center;
+      color: #dddddd;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #222;
+    }
+
+    .footer {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 600px) {
+      .btn-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .btn {
+        flex: 1;
+        max-width: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Links -->
+  <div class="nav">
+    <a href="/about">About</a>
+    <a href="https://github.com/your-github-link" target="_blank">GitHub</a>
+  </div>
+
+  <div class="header">
+    <h1>spy game</h1>
+    <p>Who’s the spy? Trust no one.</p>
+  </div>
+
+  <div class="btn-group">
+    <a href="/create_game" class="btn">create</a>
+    <a href="/join_to_game" class="btn">join</a>
+  </div>
+
+  <div class="footer">
+    made with <span style="color: red;">❤</span> by <a href="https://your-blog-link.example.com" target="_blank">mateo</a>
+  </div>
+
+</body>
+</html>
+
