@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Join Game - spy game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: monospace;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0c0c0c;
+      color: #cccccc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      color: #eeeeee;
+      margin-bottom: 0.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #777777;
+      margin-top: 0.5rem;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 4rem;
+    }
+
+    .input {
+      background: none;
+      border: 1px solid #444;
+      padding: 1rem;
+      color: #dddddd;
+      font-size: 1.1rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    .input:focus {
+      outline: none;
+      border-color: #888;
+    }
+
+    .btn {
+      background: none;
+      border: 1px solid #444;
+      padding: 1rem;
+      text-align: center;
+      color: #dddddd;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #222;
+    }
+
+    .footer {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 600px) {
+      .form-container {
+        width: 80%;
+      }
+
+      .btn {
+        flex: 1;
+        max-width: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Join Game</h1>
+    <p>Enter the game ID and join the battle. Trust no one.</p>
+  </div>
+
+  <div class="form-container">
+    <form method="POST" action="/join_to_game">
+      <label for="gameId" style="color: #888; margin-bottom: 0.5rem;">Enter Game ID</label>
+      <input type="text" name="gameId" id="gameId" class="input" placeholder="Enter Game ID" required>
+      <button type="submit" class="btn">Join Game</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    made with <span style="color: red;">❤</span> by <a href="https://your-blog-link.example.com" target="_blank">mateo</a>
+  </div>
+
+</body>
+</html>
+
