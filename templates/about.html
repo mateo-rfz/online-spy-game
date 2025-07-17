@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About - spy game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: monospace;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0c0c0c;
+      color: #cccccc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    /* Header Menu Style */
+    .nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      padding: 1rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .nav a {
+      color: #cccccc;
+      text-decoration: none;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+    }
+
+    .nav a:hover {
+      background-color: #333;
+      border-radius: 5px;
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      color: #eeeeee;
+      margin-bottom: 0.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #777777;
+      margin-top: 0.5rem;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .about-info {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 5px;
+      color: #cccccc;
+    }
+
+    .footer {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+
+    .footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 600px) {
+      .about-content {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/create_game">Create Game</a>
+  </div>
+
+  <div class="header">
+    <h1>About the Game</h1>
+    <p>Learn about the spy game and how to join or create one.</p>
+  </div>
+
+  <div class="about-content">
+    <div class="about-info">
+      <p><strong>Welcome to the Spy Game!</strong></p>
+      <p>This is a game where players have to guess who the spy is among them. The spy doesn't know who the other players are, and the players try to find the spy.</p>
+      <p><strong>Game Features:</strong></p>
+      <ul>
+        <li>Multiple players can join.</li>
+        <li>Each player gets a role: either a normal player or a spy.</li>
+        <li>The goal is for the players to guess who the spy is or for the spy to stay hidden.</li>
+        <li>Roles are assigned randomly at the start of the game.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    made with <span style="color: red;">❤</span> by <a href="https://your-blog-link.example.com" target="_blank">mateo</a>
+  </div>
+
+</body>
+</html>
+
