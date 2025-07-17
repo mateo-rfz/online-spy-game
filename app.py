@@ -52,7 +52,7 @@ def gameMng(gameId):
         if not role : 
             return redirect(f"/join_to_game?error=pls+Enter+valid+Game+id")
  
-    resp = make_response(render_template("releaseAct.html", gameId=gameId, role=role))
+    resp = make_response(render_template("releaseRole.html", gameId=gameId, role=role))
 
     if not existing_role:
         resp.set_cookie(f"role_{gameId}", role)

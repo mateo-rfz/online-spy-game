@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Release Act - spy game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: monospace;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0c0c0c;
+      color: #cccccc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    /* Header Menu Style */
+    .nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      padding: 1rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .nav a {
+      color: #cccccc;
+      text-decoration: none;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+    }
+
+    .nav a:hover {
+      background-color: #333;
+      border-radius: 5px;
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      color: #eeeeee;
+      margin-bottom: 0.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #777777;
+      margin-top: 0.5rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .game-info {
+      background: #222;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    .game-info p {
+      font-size: 1.1rem;
+      color: #cccccc;
+    }
+
+    .act-info {
+      background: #333;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    .act-info p {
+      font-size: 1.1rem;
+      color: #cccccc;
+    }
+
+    .footer {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+
+    .footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 600px) {
+      .content {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+  </div>
+
+  <div class="header">
+    <h1>Release Act</h1>
+    <p>Here are your game details and role. Trust no one.</p>
+  </div>
+
+  <div class="content">
+    <div class="game-info">
+      <p><strong>Game ID:</strong> {{ gameId }}</p>
+    </div>
+
+    <div class="act-info">
+      <p><strong>Your Role:</strong> {{ role }}</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    made with <span style="color: red;">❤</span> by <a href="https://mateorfz.ir" target="_blank">mateo</a>
+  </div>
+
+</body>
+</html>
+
