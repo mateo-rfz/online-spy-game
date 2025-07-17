@@ -49,7 +49,9 @@ def gameMng(gameId):
     else:
         DB = dbManager.DbManager()
         role = DB.getAct(gameId)
-
+        if not role : 
+            return redirect(f"/join_to_game?error=pls+Enter+valid+Game+id")
+ 
     resp = make_response(render_template("releaseAct.html", gameId=gameId, role=role))
 
     if not existing_role:
@@ -81,7 +83,7 @@ def createGame () :
     if request.method == "POST" :
         playerNumbers = request.form.get("playerNumbers")
         spyNumbers = request.form.get("spyNumbers")
-        
+         
         DB = dbManager.DbManager()
         gameId = DB.addGame(int(playerNumbers) , int(spyNumbers))
         

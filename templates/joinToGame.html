@@ -108,6 +108,10 @@
 <body>
 
   <div class="header">
+      {% if request.args.get("error") %}
+        <p style="color: red;">{{ request.args.get("error") }}</p>
+        {% endif %}
+
     <h1>Join Game</h1>
     <p>Enter the game ID and join the battle. Trust no one.</p>
   </div>
