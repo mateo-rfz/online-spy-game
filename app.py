@@ -2,7 +2,8 @@ from flask import (
         Flask,
         redirect , 
         request , 
-        render_template
+        render_template , 
+        make_response
         )
 
 
@@ -29,24 +30,36 @@ def main () :
     """
     return render_template("home.html")
 
+
+
+
+
+
+
+
  
 
 
-
-
-
-
-
-
-
 @app.route("/game/<string:gameId>")
-def gameMng (gameId) : 
-    """
-    you can join to game with /<gamePath>
-    """
-    DB = dbManager.DbManager()
-    act = DB.getAct(gameId)
-    return render_template("releaseAct.html" , gameId = gameId , role = act)
+def gameMng(gameId):
+    existing_role = request.cookies.get(f"role_{gameId}")
+
+    if existing_role:
+        role = existing_role
+    else:
+        DB = dbManager.DbManager()
+        role = DB.getAct(gameId)
+
+    resp = make_response(render_template("releaseAct.html", gameId=gameId, role=role))
+
+    if not existing_role:
+        resp.set_cookie(f"role_{gameId}", role)
+
+    return resp
+
+
+
+
 
 
 
